@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0b5d4b"
+  >
+
+  <meta
+    name="mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  >
+
+  <meta
+    name="apple-mobile-web-app-title"
+    content="TPQ AD-DU'A"
+  >
+
+  <meta
+    name="application-name"
+    content="TPQ AD-DU'A"
+  >
+
+  <link
+    rel="manifest"
+    href="./manifest.json"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="./icon-192.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="./icon-192.png"
+  >
+
+  <title>TPQ AD-DU'A</title>
+
+  <style>
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #101116;
+    }
+
+    #appFrame {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      background: #101116;
+    }
+
+    #loading {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #101116;
+      color: #00ffcc;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="loading">
+    Membuka Aplikasi TPQ AD-DU'A...
+  </div>
+
+  <iframe
+    id="appFrame"
+    src="https://script.google.com/macros/s/AKfycbzJffsFAYc4rCWe5OUPa6HU2wwskI-lP5_e33739QS-KfVuYbzM8mFFz-hiuy4oJVID4Q/exec"
+    allow="clipboard-read; clipboard-write"
+    allowfullscreen
+  ></iframe>
+
+  <script>
+
+    const frame =
+      document.getElementById('appFrame');
+
+    const loading =
+      document.getElementById('loading');
+
+    frame.addEventListener(
+      'load',
+      function () {
+        setTimeout(
+          function () {
+            loading.style.display = 'none';
+          },
+          300
+        );
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
